@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Dashboard | BarangayGo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>BarangayGo</h2>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main class="dashboard">
+    <h1>Resident Dashboard</h1>
+    <p>Welcome, <span id="userName">Resident</span>!</p>
+
+    <section class="panel">
+        <h2>Request a Document</h2>
+
+        <form id="requestForm" enctype="multipart/form-data">
+
+            <label>Document Type</label>
+            <select name="document_type" required>
+                <option value="">Select Document</option>
+                <option>Barangay Clearance</option>
+                <option>Certificate of Indigency</option>
+                <option>Certificate of Residency</option>
+                <option>Barangay Certificate</option>
+            </select>
+
+            <label>Purpose</label>
+            <select name="purpose" required>
+                <option value="">Select Purpose</option>
+                <option>Employment</option>
+                <option>School/Enrollment</option>
+                <option>Financial Assistance</option>
+                <option>Business Requirement</option>
+                <option>Personal Use</option>
+                <option>Other</option>
+            </select>
+
+            <label>Additional Details</label>
+            <textarea name="details" placeholder="Enter additional information"></textarea>
+
+            <label>Upload Valid ID (JPG, PNG, PDF - Max 5MB)</label>
+            <input type="file" name="id_file"
+                   accept=".jpg,.jpeg,.png,.pdf" required>
+
+            <button type="submit">Submit Request</button>
+            <p id="message"></p>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>My Document Requests</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reference No.</th>
+                        <th>Document</th>
+                        <th>Purpose</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="requestTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Notifications</h2>
+        <div id="notificationList"></div>
+    </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

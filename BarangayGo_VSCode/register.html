@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | BarangayGo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <form id="registerForm" class="auth-card">
+        <h2>Create Account</h2>
+        <p>Register as a barangay resident.</p>
+
+        <label>Full Name</label>
+        <input type="text" name="fullname" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Complete Address</label>
+        <textarea name="address" required></textarea>
+
+        <label>Password</label>
+        <input type="password" name="password" minlength="8" required>
+
+        <button type="submit">Create Account</button>
+
+        <p id="message"></p>
+
+        <p>Already registered?
+            <a href="login.html">Login here</a>
+        </p>
+    </form>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
